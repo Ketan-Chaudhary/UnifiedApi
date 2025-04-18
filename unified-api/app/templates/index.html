@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unified Digit Recognition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Unified Digit Recognition</h1>
+
+    <form method="POST" action="/predict" enctype="multipart/form-data" aria-label="Digit recognition form">
+
+      <fieldset>
+        <legend>Select Digit Type</legend>
+        <label for="decimal">
+          <input type="radio" id="decimal" name="model_type" value="decimal" checked>
+          Decimal (0-9)
+        </label>
+        <label for="devanagari">
+          <input type="radio" id="devanagari" name="model_type" value="devanagari">
+          Devanagari (०-९)
+        </label>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="image">Upload Digit Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+      </div>
+
+      <button type="submit" aria-label="Submit digit image for recognition">Predict</button>
+    </form>
+
+    {% if prediction %}
+      <div class="result" role="status">
+        <strong>Prediction:</strong> {{ prediction }}
+      </div>
+    {% elif error %}
+      <div class="error" role="alert">
+        <strong>Error:</strong> {{ error }}
+      </div>
+    {% endif %}
+  </main>
+</body>
+</html>
