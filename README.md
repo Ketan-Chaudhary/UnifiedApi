@@ -26,7 +26,7 @@ It uses three separate Flask APIs, each with its own environment (due to TensorF
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/Ketan-Chaudhary/UnifiedApi.git
+https://github.com/Bit-Nest/UnifiedApi.git
 cd UnifiedApi
 ```
 
