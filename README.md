@@ -46,7 +46,7 @@ UnifiedApi/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Ketan-Chaudhary/UnifiedApi.git
+git clone https://github.com/Bit-Nest/UnifiedApi.git
 cd UnifiedApi
 ```
 
@@ -126,7 +126,7 @@ docker swarm init
 ### 3. Clone the project
 
 ```bash
-git clone https://github.com/Ketan-Chaudhary/UnifiedApi.git
+git clone https://github.com/Bit-Nest/UnifiedApi.git
 cd UnifiedApi
 ```
 
